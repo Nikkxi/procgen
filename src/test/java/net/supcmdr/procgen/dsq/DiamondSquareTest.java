@@ -24,7 +24,7 @@ public class DiamondSquareTest {
 		assertNotNull(map);
 		
 		//printIntArrayToConsole(map);
-		printIntArrayToScreenshot(map);
+		//printIntArrayToScreenshot(map);
 	}
 	
 	private void printIntArrayToConsole(int[][] map) {
@@ -51,16 +51,12 @@ public class DiamondSquareTest {
 			}
 		}
 		
-		System.out.println("done iterating.");
 		try {
 			ImageIO.write(img, "jpg", new File("P:\\intarray.jpg"));
-			System.out.println("after file written.");
 		}catch(Exception e) {
 			System.out.println("Failed to write image to file.");
 			e.printStackTrace();
 		}
-		img.flush();
-		System.out.println("job complete.");
 	}
 
 }
