@@ -1,33 +1,17 @@
-package net.supcmdr.procgen.dsq;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+package net.supcmdr.procgen.utilities;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.imageio.ImageIO;
 
-import org.junit.jupiter.api.Test;
-
-public class DiamondSquareTest {
+public class TestUtils {
 	
-	public DiamondSquareTest() {
+	public TestUtils() {
 		
 	}
 	
-	@Test
-	public void RunTest() {
-		DiamondSquare ds = new DiamondSquare(12, 256, 32);
-		
-		int[][] map = ds.doDiamondSquare();
-		
-		assertNotNull(map);
-		
-		//printIntArrayToConsole(map);
-		//printIntArrayToScreenshot(map);
-	}
-	
-	private void printIntArrayToConsole(int[][] map) {
+	public void printIntArrayToConsole(int[][] map) {
 		for(int x = 0; x < map.length; x++) {
 			for(int y = 0; y < map[0].length; y++) {
 				int value = map[x][y];
@@ -41,7 +25,7 @@ public class DiamondSquareTest {
 		}
 	}
 	
-	private void printIntArrayToScreenshot(int[][] map) {
+	public void printIntArrayToScreenshot(int[][] map) {
 		BufferedImage img = new BufferedImage(map.length, map[0].length, BufferedImage.TYPE_3BYTE_BGR);
 		
 		for(int x = 0; x < map.length; x++) {
